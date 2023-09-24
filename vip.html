@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">            
+<meta charset="utf-8" name="viewport"
+content= "width=device-width, initial-scale=1.0">
+<title>E-commerce Website</title>
+<style type="text/css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root {
+
+--heading:#393A56;
+--text:#7E7F85;
+--theme:#FD5353;
+--bg:#F7F8F9;
+--footering:#415161;
+
+}
+body{
+font-family:sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+ul{
+list-style:none;
+}
+
+header {
+width:100%;
+height:120vh;
+background:white;
+
+}
+h1 ,h2 ,h3,h4,h5{
+
+color:#393A56;
+}
+ p{
+ color:#7E7F85;
+ }
+.brand img{
+width:80px;
+height:40px;
+margin-top:4px;
+margin-left:6px;
+}
+
+.container {
+
+margin:auto;
+width:90%;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+background:rgba(128,128,128,0.2);
+
+}
+
+
+
+.navlink a {
+color:#393A56;
+
+}
+
+
+/* NAVBAR MENU */
+.menu {
+display: flex;
+gap: 1em;
+font-size: 12px;
+margin:15px auto;
+}
+
+.menu li a:hover {
+color:#FD5353;
+padding:6px;
+
+}
+.menu li a.active{
+background:#FD5353;
+padding:6px;
+}
+.container {
+margin:auto;
+width:90%;
+
+}
+.fa-shopping-cart{
+color:#FD5353;
+font-size:17px;
+margin-right:10px;
+cursor:pointer;
+}
+
+
+.menu li {
+padding: 2px 4px;
+}
+
+input[type=checkbox] {
+display: none;
+} 
+
+/* HAMBURGER MENU */
+.hamburger {
+display: none;
+font-size: 24px;
+user-select: none;
+color:#393A56;
+
+}
+.menu li a img{
+width:30px;
+display:block;
+margin-top:-7px;
+}
+
+
+
+.header-content{
+display:flex;
+align-items:center;
+justify-content:space-between;
+margin-top:20px;
+}
+ 
+.header-content img{
+max-width:90%;
+
+}
+
+
+
+.line {
+background:#FD5353;
+width:80px;
+height:2px;
+border-radius:5px;
+margin:15px 0 5px 0;
+}
+ .header-info p{ 
+ font-size:9px;
+ width:200px;
+ }
+ 
+ .header-info h1{
+ font-size:20px;
+ }
+
+
+.header-info h1,.header-info p{
+margin:4px 0;
+
+}
+
+.btn{
+color:whitesmoke;
+background:#FD5353;
+padding:6px ;
+border:none;
+font-size:15px;
+margin-top:5px;
+margin-bottom:10px;
+border-radius:5px;
+cursor:pointer;
+}
+
+#categories {
+display:flex;
+justify-content:space-between;
+
+
+}
+.category {
+text-align:center;
+padding-top:20px
+}
+.category img{
+width:90%;
+cursor:pointer;
+}
+.category p{
+font-size:12px; 
+}
+
+
+
+.section-info {
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+margin:20px auto;
+
+}
+
+.products {
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+}
+.products .product h4{
+font-size:15px;
+} 
+.products .product p{
+font-size:10px;
+}
+.products .product img{
+width:90%;
+cursor:pointer;
+
+}
+
+.products-info{
+text-align:center;
+margin-bottom:30px;
+}
+ .bg{
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+#offer {
+background:white;
+margin-bottom:20px;
+margin-top:-6px;
+}
+.offer-content {
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.offer-content img{
+width:80%;
+
+}
+.offer-info h2{
+font-size:20px;
+
+}
+.offer-info p{
+font-size:9px;
+}
+
+#company{
+margin:30px auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:white;
+height:50px;
+width:100%;
+box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+
+}
+#company img{
+width:90%;
+margin:0 10px;
+cursor:pointer;
+
+}
+#footer{
+background:black;
+width:100%;
+
+}
+.footer-content{
+display:flex;
+padding:50px 0;
+}
+.footer-content img{
+width:90%;
+}
+.footer-content .col{
+flex:1;
+margin:0 20px;
+
+}
+
+#footer h3{
+
+color:whitesmoke;
+}
+.sub-nav{
+display:flex;
+align-items:center;
+text-align:center;
+justify-content:center;
+margin-bottom:8px;
+}
+
+ul.pagination {
+ display: inline-block;
+ padding: 0;
+ margin:10px auto;
+ }
+ 
+ ul.pagination li {display: inline;
+
+ }
+ 
+ ul.pagination li a {
+ color: black;
+ padding: 3px 6px;
+ text-decoration: none;
+ }
+
+ul.pagination li a:hover{
+color:#FD5353;
+
+}
+.pagination li a .active{
+background:#FD5353;
+}
+.col li ,.col p {
+color:#b5b5b5;
+
+}
+hr{
+border:none;
+height:1px;
+background:#b5b5b5;
+width:100%;
+
+}
+.copyright {
+text-align:center;
+padding:10px 0;
+}
+.testmony {
+width:90%;
+margin:auto;
+}
+
+.testmony .row{
+display:flex;
+
+}
+.testmony .row .col-3 {
+text-align:center;
+
+}
+
+.testmony .row .col-3 p{
+font-size:15px;
+}
+
+.testmony .row .col-3 img{
+width:90%;
+padding-top:6px;
+height:150px;}
+
+span, .fa-quote-left{
+
+color:#FD5353;
+}
+
+
+
+/*------mobile devices----*/
+
+@media only screen and (max-width:400px){
+
+.container{
+width:90%;
+
+}
+.menu {
+ display:none;
+ position: absolute;
+ top:32px;
+ background:#415161;
+ right: 0;
+ left: 66px;
+ width:160px;
+ text-align: center;
+ padding: 16px 0;
+ }
+ 
+ .menu li a:hover {
+ display: inline-block;
+
+ color:#FD5353;
+ transition: 0.3s ease;
+ }
+.menu li a{
+color:#dddddd;
+}
+ 
+ .menu li + li {
+ margin-top: 12px;
+ 
+ }
+ 
+ input[type=checkbox]:checked ~ .menu {
+ display: block;
+ }
+ 
+ .hamburger {
+ display: block;
+ margin:10px auto;
+ margin-right:15px;
+ }
+
+
+
+
+.brand img{
+width:100px;
+
+
+}
+ header{
+ height:95vh;
+ 
+ }
+.header-content {
+flex-direction:column;
+
+} 
+
+.header-content h1{
+
+font-size:25px;
+}
+
+#categories{
+flex-direction:column;
+
+}
+.category img{
+max-width:80%;
+}
+.category{
+
+margin:auto;
+}
+.category h5{
+font-size:20px;
+}
+
+.products{
+flex-direction:column;
+
+}
+
+.products .product img{
+margin:auto 25px;
+max-width:80%;
+}
+
+.products-info h6,.products-info p{
+
+font-size:13px;
+}
+.offer-content{
+flex-direction:column;
+padding:;
+}
+.offer-content img{
+max-width:90%;
+}
+.offer-content h2{
+
+font-size:25px;
+}
+.footer-content{
+flex-direction:column;
+
+}
+.col{
+padding:10px 0;
+}
+
+.testmony .row {
+flex-direction:column;
+
+}
+.testmony .row .col-3 img {
+max-width:80%;
+height:200px;
+}
+
+.testmony .row .col-3 h3{
+margin-bottom:15px;
+
+}
+
+}
+
+
+</style>
+
+
+</head>
+<body>
+<header>
+<div class="container" >
+<nav class="navbar" >
+<div class="brand" ><img src="logo1.png"> </div>
+<ul class="navlink">
+<input type="checkbox" id="checkbox_toggle" />
+ <label for="checkbox_toggle" class="hamburger"><i class="fa fa-bars"></i> </label>
+ <div class="menu">
+<li><a href="#" class="active"  >Home</a></li>
+<li><a href="#" >All Products</a></li>
+<li><a href="#" >Contact Us</a></li>
+<li><a href="#" >About Us</a></li>
+<li><a href="#" ><i class="fas fa-shopping-cart" ></i> </a></li>
+</div></ul></nav>
+
+
+
+<div class="header-content" >
+<div class="header-info">
+<div class="line"></div>
+<h5>Best Quality Products</h5>
+<h1>The Worlds Most Comfortable Clothing</h1>
+<p>Success isn't always about greatness.
+It's about consistency.Consistent,hard work gains success.Greatness will come.</p>
+<button class="btn" >Get Started &#8594</button>
+</div>
+<div class="header-img"> 
+<img src="main.png" ></div>
+</div></div></header>
+
+<!-------category----->
+<div class="bg" >
+<section class="container"  id="categories">
+<div class="category" >
+<img src="cate.png" alt="">
+<div class="category-content">
+<p>Most Loved Design</p>
+<h3>Men Trouser</h3>
+</div></div>
+<div class="category" >
+<div class="category-content">
+<p>Most Loved Design</p>
+<h3>Lady's Jean</h3>
+<img src="cate1.png" alt="">
+</div></div>
+
+<div class="category" >
+<img src="cate2.png" alt="">
+<div class="category-content">
+<p>Most Loved Design</p>
+<h3>Men Gray Top</h3>
+</div></div></section>
+
+<!-----feature products---->
+<section class="container"  id="featured-products">
+<div class="section-info">
+<h2>Featured Products</h2>
+<div class="line" ></div>
+</div>
+<div class="products"> 
+<div class="product">
+<img src="new.png" >
+<div class="products-info">
+<p>Men's Combo</p>
+<h4>Men's Outfit Combo</h4>
+<span>&#9733 &#9733 &#9733 &#9733 &#9734</span>
+<h6>$110.00</h6></div></div>
+
+<div class="product">
+<img src="new2.png" >
+<div class="products-info">
+<p>Women's Jeweries</p>
+<h4>Gold Women's Jewery</h4>
+<span>&#9733 &#9733 &#9733 &#9734 &#9734</span>
+<h6>$200.00</h6></div></div>
+
+<div class="product">
+<img src="new3.png" >
+<div class="products-info">
+<p>Fancy Nike Shoes</p>
+<h4>Unisex Nike Shoes</h4>
+<span>&#9733 &#9733 &#9733 &#9733 &#9734</span>
+<h6>$120.00</h6></div></div>
+
+<div class="product">
+<img src="new4.png" >
+<div class="products-info">
+<p>Women's Outfit</p>
+<h4>Wemens Jean Jacket</h4>
+<span>&#9733 &#9733 &#9733 &#9733 &#9733</span>
+<h6>$130.00</h6>
+</div></div></div>
+<div class="sub-nav" >
+<ul class="pagination">
+ <li><a href="#">«</a></li>
+ <li><a href="#">1</a></li>
+ <li><a class="active" href="#">2</a></li>
+ <li><a href="#">3</a></li>
+ <li><a href="#">4</a></li>
+ <li><a href="#">5</a></li>
+ <li><a href="#">»</a></li>
+ </ul></div>
+ 
+
+
+</section></div>
+
+<!--------offer---->
+<section id="offer" class="container" >
+<div class="offer-content" >
+<img src="offer2.png" >
+<div class="offer-info" >
+<div class="line" ></div>
+<h2>Hurry Up ! <br> Deal of The Day</h2>
+<p>Lorem ipdum dolor set amet consectetur adipicising elit.</p>
+<button class="btn" >Shop Now &#8594</button>
+</div></div></section>
+
+<!-------Testmonial---->
+
+<div class="testmony" >
+<div class="small-container" >
+<div class="row" >
+<div class="col-3" >
+<i class="fa fa-quote-left"></i>
+<p>Lorem ipsum has being the industrh's standard dummy text ever.</p>
+<span>&#9733 &#9733 &#9733 &#9734 &#9734</span>
+<img src="b3.png">
+<h3>Sean Parker</h3></div>
+
+<div class="col-3" >
+<i class="fa fa-quote-left"></i>
+<p>Lorem ipsum has being the industrh's standard dummy text ever.</p>
+<span>&#9733 &#9733 &#9733 &#9733 &#9733</span>
+<img src="b5.png">
+<h3>MaryAnn</h3></div>
+
+<div class="col-3" >
+<i class="fa fa-quote-left"></i>
+<p>Lorem ipsum has being the industrh's standard dummy text ever.</p>
+<span>&#9733 &#9733 &#9733 &#9733 &#9734</span>
+<img src="b.png">
+<h3>Samuel J</h3></div></div></div></div>
+
+
+
+<!------feature---->
+
+<div id="company" class="container"  >
+<img src="s1.png" >
+<img src="s2.png" >
+<img src="s3.png" >
+<img src="s4.png" >
+</div>
+<!----footer---->
+<div id="footer" >
+<div class="container" >
+<div class="footer-content" >
+<div class="col">
+<img src="ll.png" >
+<p>Lorem ipdum dolor set amet consectetur adipicising elit.</p>
+</div>
+
+<div class="col">
+<h3>Company</h3>
+<ul>
+<li>Home</li>
+<li>About Us</li>
+<li>All Products</li>
+<li>Contact Us</li></ul></div>
+
+<div class="col">
+<h3>Businesses</h3>
+<ul>
+<li>Projects</li>
+<li>Customers</li>
+<li>Our Team</li>
+<li>Affliate Market</li></ul>
+</div>
+
+
+<div class="col" >
+<h3>Follow us</h3>
+<ul>
+<li>Facebook</li>
+<li>Youtube</li>
+<li>Twitter</li>
+<li>Instagram</li></ul>
+</div>
+</div></div>
+<hr>
+<p class="copyright" >Copyright ©2023   Elite Technologies</p>
+</div>
+
+
+
+</body>
+</html>
